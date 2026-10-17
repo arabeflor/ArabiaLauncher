@@ -1,0 +1,19 @@
+[package]
+name = "arabia-launcher"
+version = "1.0.0"
+edition = "2021"
+description = "A Minecraft launcher"
+build = "build.rs"
+
+[[bin]]
+name = "ArabiaLauncher"
+path = "code/src/main.rs"
+
+[dependencies]
+eframe = "0.31"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[build-dependencies]
+image = { version = "0.25", default-features = false, features = ["png", "ico"] }
